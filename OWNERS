@@ -1,0 +1,24 @@
+# See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
+
+approvers:
+  - empovit
+  - asm582
+  - tardieu
+  - harche
+  - sairameshv
+  - mrunalp
+  - mamy-CS
+  - kannon92
+  - cpmeadors
+  - rphillips
+reviewers:
+  - empovit
+  - asm582
+  - tardieu
+  - harche
+  - sairameshv
+  - mrunalp
+  - mamy-CS
+  - kannon92
+  - cpmeadors
+  - rphillips
