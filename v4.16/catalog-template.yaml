@@ -4,4 +4,4 @@ GenerateMinorChannels: true
 DefaultChannelTypePreference: "minor"
 Stable:
   Bundles:
-  - Image: quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle@sha256:f68a5f446d7dce5a3e1e22aabe7c0037d80b1f1dbd64cf3af16ef8a5b36900f9
+  - Image: quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:f0b27d5caed174079bd762aacb7a3034f6ce7f65d0719efedccf9d586a38a890
