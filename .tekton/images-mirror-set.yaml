@@ -1,0 +1,43 @@
+apiVersion: config.openshift.io/v1
+kind: ImageTagMirrorSet
+metadata:
+  name: instaslice-registry
+spec:
+  imageTagMirrors:
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-daemonset-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-webhook-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-scheduler-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle
+---
+apiVersion: config.openshift.io/v1
+kind: ImageDigestMirrorSet
+metadata:
+  name: instaslice-registry
+spec:
+  imageDigestMirrors:
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-daemonset-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-webhook-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-scheduler-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next
+      source: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle
