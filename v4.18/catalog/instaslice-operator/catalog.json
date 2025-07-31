@@ -184,19 +184,19 @@
         },
         {
             "name": "daemonset-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:9f375408f93bc3bf49008fdf046bf988993db7a74e59b2e33dca66c90ed05430"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:cd792b2b1f845c00434bdbbda38300b8bb2b5a8badd6f7a50cb3b0698882187a"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:38c4deec455c6ce493c40b6332831f7bce93c9087229b16ede72515ef452a344"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:0adc02e8b3acac4c8e1cd0b06e169f278b726b9e123fe7a82f42cfbe996fc7f2"
         },
         {
             "name": "scheduler-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:cfee9b1228ae98b1a52a688b84efaf7cb57d5ad041abd1e716c59f38a5bd0e51"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:0a6c75cfa5cdebdd02ce19a51c9997c3459265fa7036b38f60741a96770f7635"
         },
         {
             "name": "webhook-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:7e28fea4e88c30c1f4a346b537c9a1a31e2ad380aa21e965cb6838020f601bab"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:05bae25506e51b9ee9b99493cd942715d340fbfc2cf1480e3d928f8392d00b1b"
         }
     ]
 }
