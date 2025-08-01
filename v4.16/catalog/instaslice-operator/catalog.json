@@ -112,7 +112,7 @@
         },
         {
             "name": "webhook-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:7e28fea4e88c30c1f4a346b537c9a1a31e2ad380aa21e965cb6838020f601bab"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:1dc16161981b4e9abcc087689457c8537df6873dcf4bd20744a368e66f0f6a68"
         }
     ]
 }
