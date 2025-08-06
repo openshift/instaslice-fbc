@@ -70,6 +70,7 @@
                     "features.operators.openshift.io/token-auth-aws": "false",
                     "features.operators.openshift.io/token-auth-azure": "false",
                     "features.operators.openshift.io/token-auth-gcp": "false",
+                    "operatorframework.io/suggested-namespace": "das-operator",
                     "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
                     "operators.operatorframework.io/builder": "operator-sdk-v1.40.0",
                     "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4",
