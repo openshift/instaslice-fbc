@@ -57,7 +57,7 @@
                     "alm-examples": "[\n  {\n    \"apiVersion\": \"inference.redhat.com/v1alpha1\",\n    \"kind\": \"DASOperator\",\n    \"metadata\": {\n      \"name\": \"cluster\",\n      \"namespace\": \"das-operator\"\n    },\n    \"spec\": {\n      \"logLevel\": \"Normal\",\n      \"managementState\": \"Managed\",\n      \"operatorLogLevel\": \"Normal\"\n    }\n  }\n]",
                     "capabilities": "Basic Install",
                     "categories": "Drivers and plugins",
-                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:0678a89b232feed1a83e2f30e2e81552f83e0d47a18d7e73fb2be8feeb5c5af6",
+                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:f36026860b0360c586a5650b94deaeef330620159028e88a3154d981d1a7074d",
                     "createdAt": "2025-07-10T20:05:15Z",
                     "description": "InstaSlice works with GPU operator to create mig slices on demand",
                     "features.operators.openshift.io/cnf": "false",
@@ -188,7 +188,7 @@
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:0678a89b232feed1a83e2f30e2e81552f83e0d47a18d7e73fb2be8feeb5c5af6"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:f36026860b0360c586a5650b94deaeef330620159028e88a3154d981d1a7074d"
         },
         {
             "name": "scheduler-image",
