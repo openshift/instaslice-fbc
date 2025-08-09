@@ -104,7 +104,7 @@
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:9ee901410d65fc0cb61ff0ac6d53962613dc7be999a687196f5bf7d3779cb0c1"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:e74c126937ede874cb7b8c1d2f2172410b2f19a6bb761dd030910c2cd422e916"
         },
         {
             "name": "scheduler-image",
