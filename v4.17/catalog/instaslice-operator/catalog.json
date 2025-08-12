@@ -17,7 +17,7 @@
     "schema": "olm.bundle",
     "name": "das-operator.v0.1.0",
     "package": "das-operator",
-    "image": "quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:6a269c84d297721ea4409e137e45bc018b50875de30c06fb37815a89d886c7d3",
+    "image": "quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:5dabec58f34e8c0c7b2c86af517a0b8e729d9c1d54526f9542872afe96fea507",
     "properties": [
         {
             "type": "olm.gvk",
@@ -181,7 +181,7 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:6a269c84d297721ea4409e137e45bc018b50875de30c06fb37815a89d886c7d3"
+            "image": "quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:5dabec58f34e8c0c7b2c86af517a0b8e729d9c1d54526f9542872afe96fea507"
         },
         {
             "name": "daemonset-image",
