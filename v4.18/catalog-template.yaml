@@ -1,7 +1,6 @@
 Schema: olm.semver
 GenerateMajorChannels: false
-GenerateMinorChannels: true
-DefaultChannelTypePreference: "minor"
+GenerateMinorChannels: false
 Stable:
   Bundles:
   - Image: quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:5dabec58f34e8c0c7b2c86af517a0b8e729d9c1d54526f9542872afe96fea507
