@@ -17,7 +17,7 @@
     "schema": "olm.bundle",
     "name": "das-operator.v0.1.0",
     "package": "das-operator",
-    "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:22473ed19cd1649eb0605411452317cdd2ca888d10d485399226826ffd5a1088",
+    "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:3d2af99f3c126ad95a57256a836a6465e99bff0667c16e57273e12fb417b2014",
     "properties": [
         {
             "type": "olm.gvk",
@@ -181,7 +181,7 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:22473ed19cd1649eb0605411452317cdd2ca888d10d485399226826ffd5a1088"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:3d2af99f3c126ad95a57256a836a6465e99bff0667c16e57273e12fb417b2014"
         },
         {
             "name": "daemonset-image",
