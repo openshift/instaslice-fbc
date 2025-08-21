@@ -3,4 +3,4 @@ GenerateMajorChannels: false
 GenerateMinorChannels: false
 Stable:
   Bundles:
-  - Image: quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:6ab86ec915c90cf3ca856401168f1a388186247cb03e0eaabfbc3d2e37f8ea38
+  - Image: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:ee8cb724a230326d297aaa0fca225b1d0918c3c6e6304528bba4671452d6ff02
