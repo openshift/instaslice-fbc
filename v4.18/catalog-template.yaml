@@ -1,6 +1,6 @@
 Schema: olm.semver
-GenerateMajorChannels: false
+GenerateMajorChannels: true
 GenerateMinorChannels: false
 Stable:
   Bundles:
-  - Image: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:ee8cb724a230326d297aaa0fca225b1d0918c3c6e6304528bba4671452d6ff02
+  - Image: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:309de603ad4198f14331639d22e462e81499870b18a4550308c97ac34af3bf3f

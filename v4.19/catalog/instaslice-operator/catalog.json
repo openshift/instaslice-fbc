@@ -1,11 +1,11 @@
 {
     "schema": "olm.package",
     "name": "das-operator",
-    "defaultChannel": "stable-v0.1"
+    "defaultChannel": "stable-v0"
 }
 {
     "schema": "olm.channel",
-    "name": "stable-v0.1",
+    "name": "stable-v0",
     "package": "das-operator",
     "entries": [
         {
@@ -17,7 +17,7 @@
     "schema": "olm.bundle",
     "name": "das-operator.v0.1.0",
     "package": "das-operator",
-    "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:ee8cb724a230326d297aaa0fca225b1d0918c3c6e6304528bba4671452d6ff02",
+    "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:309de603ad4198f14331639d22e462e81499870b18a4550308c97ac34af3bf3f",
     "properties": [
         {
             "type": "olm.gvk",
@@ -57,7 +57,7 @@
                     "alm-examples": "[\n  {\n    \"apiVersion\": \"inference.redhat.com/v1alpha1\",\n    \"kind\": \"DASOperator\",\n    \"metadata\": {\n      \"name\": \"cluster\",\n      \"namespace\": \"das-operator\"\n    },\n    \"spec\": {\n      \"logLevel\": \"Normal\",\n      \"managementState\": \"Managed\",\n      \"operatorLogLevel\": \"Normal\"\n    }\n  }\n]",
                     "capabilities": "Basic Install",
                     "categories": "Drivers and plugins",
-                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:6bf54f4f51ad14ba6564725c93e66d2ba0ad34c9eea7f5cf2d68634f7de9492a",
+                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:814ac0501733d971084ae29559132d582adb02736421bd9a97df740976c97896",
                     "createdAt": "2025-08-13T12:06:16Z",
                     "description": "Dynamic Accelerator Slicer works with GPU operator to create mig slices on demand",
                     "features.operators.openshift.io/cnf": "false",
@@ -181,23 +181,23 @@
     "relatedImages": [
         {
             "name": "daemonset-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:d684de457c64d6d4408082574203b353bdb5f84d19039a123870f4b5f38efd91"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:504d127a567fef4f26c0ff61fd3ce8637ca766a3047e5fbb15bdbe45982c5d51"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:ee8cb724a230326d297aaa0fca225b1d0918c3c6e6304528bba4671452d6ff02"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:309de603ad4198f14331639d22e462e81499870b18a4550308c97ac34af3bf3f"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:6bf54f4f51ad14ba6564725c93e66d2ba0ad34c9eea7f5cf2d68634f7de9492a"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:814ac0501733d971084ae29559132d582adb02736421bd9a97df740976c97896"
         },
         {
             "name": "scheduler-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:0442eab0325bffdcc8737d7fd8db16b706e845c2ea2c46675e98719ddd728cf9"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:18aa9abe5d4e705ee6b2b92e96fa5577da8fa3f92d4220c0eaff212ae432198d"
         },
         {
             "name": "webhook-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:4ec95bfcf6c1b2104893f37b68c7e5db5a7b673f433bd2799d735ffadb4afca3"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:aa78424131f2795cb5c70e3247e0b376f225d26c1c64a6c9dd546f2f7d2616f0"
         }
     ]
 }
