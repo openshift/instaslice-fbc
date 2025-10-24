@@ -17,7 +17,7 @@
     "schema": "olm.bundle",
     "name": "das-operator.v0.1.0",
     "package": "das-operator",
-    "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:309de603ad4198f14331639d22e462e81499870b18a4550308c97ac34af3bf3f",
+    "image": "quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:107383b839146b9a28aa8e2b3b9f8074c5a7270f6e337727473aafe10e7ca394",
     "properties": [
         {
             "type": "olm.gvk",
@@ -57,8 +57,8 @@
                     "alm-examples": "[\n  {\n    \"apiVersion\": \"inference.redhat.com/v1alpha1\",\n    \"kind\": \"DASOperator\",\n    \"metadata\": {\n      \"name\": \"cluster\",\n      \"namespace\": \"das-operator\"\n    },\n    \"spec\": {\n      \"logLevel\": \"Normal\",\n      \"managementState\": \"Managed\",\n      \"operatorLogLevel\": \"Normal\"\n    }\n  }\n]",
                     "capabilities": "Basic Install",
                     "categories": "Drivers and plugins",
-                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:814ac0501733d971084ae29559132d582adb02736421bd9a97df740976c97896",
-                    "createdAt": "2025-08-13T12:06:16Z",
+                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:5cb1f3f8986f4ebd6793bca4d9f404fe674b6cf772bca4486106e93684a8a0eb",
+                    "createdAt": "2025-09-19T20:10:57Z",
                     "description": "Dynamic Accelerator Slicer works with GPU operator to create mig slices on demand",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -97,7 +97,7 @@
                         }
                     ]
                 },
-                "description": "### Introduction\nDynamic Accelerator Slicer uses stable APIs and works with GPU operator to create mig slices on demand.\n\n### Prerequisites\n\n1. Install the [NVIDIA GPU drivers and CUDA toolkit](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#driver-installation) on the host.\n2. Install the [NVIDIA Container Toolkit (CTK)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).\n3. Configure the NVIDIA Container Runtime as the default Docker runtime:\n      `sudo nvidia-ctk runtime configure --runtime=docker --set-as-default`\n4. Restart Docker to apply the changes:\n      `sudo systemctl restart docker`\n5. Configure the NVIDIA Container Runtime to use volume mounts to select devices to inject into a container:\n      `sudo nvidia-ctk config --set accept-nvidia-visible-devices-as-volume-mounts=true --in-place`\n      This sets accept-nvidia-visible-devices-as-volume-mounts=true in the /etc/nvidia-container-runtime/config.toml file\n6. Enable MIG on the GPU\n      Check if MIG is enabled on the host GPU - look for Enabled in the third row of the nvidia GPU table, while running `nvidia-smi`\n7. Create symlink in the control-plane container\n      `docker exec -ti kind-control-plane ln -s /sbin/ldconfig /sbin/ldconfig.real`\n8. Unmount the nvidia devices in the control-plane container\n      `docker exec -ti kind-control-plane umount -R /proc/driver/nvidia`\n9. Install the GPU Operator\n      `helm upgrade --install --wait gpu-operator -n gpu-operator --create-namespace nvidia/gpu-operator \\\n        --set mig.strategy=mixed \\\n        --set cdi.enabled=true \\\n        --set migManager.enabled=false \\\n        --set migManager.config.default=\"\"`\n10. Deploy cert manager\n      `kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.15.3/cert-manager.yaml`\n      \n### API Backward Compatibility\n**NOTE:**  Until Operator supports **seamless upgrades**, a new version of\nthe operator may introduce a change that is **NOT** backwards compatible with\nthe previous version. Thus, to upgrade the operator, uninstall the already\ninstalled version completely (including CRDs) and install the new version.\nFor example to upgrade from 0.1.0 to 0.2.0, you must uninstall `0.1.0` by\nfollowing [uninstall operator section](https://github.com/openshift/instaslice-operator)\nand install the new version.\n\nChanges to patch version (major.minor.patch) indicates that no breaking changes\nare introduced, thus upgrade can be done without uninstalling and reinstalling\nthe operator.\n\n### Why Dynamic Accelerator Slicer\n\nPartitionable accelerators provided by vendors need partition to be created at node boot-time or to change partitions one would have to evict all the workloads at the node level to create new set of partitions.\n\nDynamic Accelerator Slicer will help if:\n\n- user does not know all the accelerators partitions needed a priori on every node on the cluster\n\n- user partition requirements change at the workload level rather than the node level\n\n- user does not want to learn or use new API to request accelerators slices\n\n- user prefers to use stable device plugins APIs for creating partitions\n\n###Features Overview\n\n- Integration with Kubernetes [quota management](https://github.com/openshift/instaslice-operator/blob/main/docs/instaslice_kube_quota_int.md)\n\n- Integration with project [Kueue](https://github.com/openshift/instaslice-operator/blob/main/docs/kueue.md)\n\n- [Emulator](https://github.com/openshift/instaslice-operator/blob/main/docs/emulator.md) mode to run test Dynamic Accelerator Slicer firstfit placement strategy\n\n- Integration with vLLM, Kserve, [Deployments](https://github.com/openshift/instaslice-operator/blob/main/samples/vllm_deployment.yaml), [Jobs](https://github.com/openshift/instaslice-operator/blob/main/samples/vllm_job.yaml), and [Statefulsets](https://github.com/openshift/instaslice-operator/blob/main/samples/vllm_statefulset.yaml)\n\n### Documentation\nDocumentation and installation guide can be found below:\n  * [Installation Guide](https://github.com/openshift/instaslice-operator)\n  * [Dynamic Accelerator Slicer Operator](https://github.com/openshift/instaslice-operator/blob/main/README.md)\n\n### License\ndas-operator is licensed under the Apache 2.0 license",
+                "description": "### Introduction\nDynamic Accelerator Slicer uses stable APIs and works with the NVIDIA GPU Operator to create MIG slices on demand.\n\n### Why Dynamic Accelerator Slicer\n\nPartitionable accelerators provided by vendors need partition to be created at node boot-time or to change partitions one would have to evict all the workloads at the node level to create new set of partitions.\n\nDynamic Accelerator Slicer will help if:\n\n- user does not know all the accelerators partitions needed a priori on every node on the cluster\n- user partition requirements change at the workload level rather than the node level\n- user does not want to learn or use new API to request accelerators slices\n- user prefers to use stable device plugins APIs for creating partitions\n\n### Features\n- Integration with vLLM, Kserve, [Deployments](https://github.com/openshift/instaslice-operator/blob/main/samples/vllm_deployment.yaml), [Jobs](https://github.com/openshift/instaslice-operator/blob/main/samples/vllm_job.yaml), and [Statefulsets](https://github.com/openshift/instaslice-operator/blob/main/samples/vllm_statefulset.yaml)\n\n### Prerequisites\n\n1. Install the cert-manager Operator for Red Hat OpenShift.\n2. Install the Node Feature Discovery (NFD) Operator and create a NodeFeatureDiscovery custom resource so GPU labels are present on the cluster nodes.\n3. Install the NVIDIA GPU Operator and configure MIG support as described in the product documentation. At a minimum:\n   - Apply a ClusterPolicy that enables MIG mode and disables the default NVIDIA device plugin on nodes where you plan to create slices.\n   - Enable MIG on each GPU (verify with `nvidia-smi` and ensure the MIG column reports `Enabled`).\n   - Confirm the GPU Operator is healthy: `oc get clusterpolicies.nvidia.com -o jsonpath='{.items[0].status.state}'`.\n\nRefer to the OpenShift documentation for the full workflow: https://docs.redhat.com/en/documentation/openshift_container_platform/4.19/html/hardware_accelerators/das-about-dynamic-accelerator-slicer-operator#das-operator-installing-web-console_das-about-dynamic-accelerator-slicer-operator.\n\n### API Backward Compatibility\n**NOTE:** Until Operator supports **seamless upgrades**, a new version of the operator may introduce a change that is **NOT** backwards compatible with the previous version. Thus, to upgrade the operator, uninstall the already installed version completely (including CRDs) and install the new version.\n\nFor example to upgrade from 0.1.0 to 0.2.0, you must uninstall `0.1.0` by following [uninstall operator section](https://github.com/openshift/instaslice-operator) and install the new version.\n\nChanges to patch version (major.minor.patch) indicates that no breaking changes are introduced, thus upgrade can be done without uninstalling and reinstalling the operator.\n\n### Documentation\nDocumentation and installation guide can be found below:\n  * [Dynamic Accelerator Slicer Operator](https://docs.redhat.com/en/documentation/openshift_container_platform/4.19/html/hardware_accelerators/das-about-dynamic-accelerator-slicer-operator#das-operator-installing-web-console_das-about-dynamic-accelerator-slicer-operator)\n\n### License\ndas-operator is licensed under the Apache 2.0 license",
                 "displayName": "Dynamic Accelerator Slicer",
                 "installModes": [
                     {
@@ -180,24 +180,24 @@
     ],
     "relatedImages": [
         {
+            "name": "",
+            "image": "quay.io/redhat-user-workloads/dynamicacceleratorsl-tenant/instaslice-operator-bundle-next@sha256:107383b839146b9a28aa8e2b3b9f8074c5a7270f6e337727473aafe10e7ca394"
+        },
+        {
             "name": "daemonset-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:504d127a567fef4f26c0ff61fd3ce8637ca766a3047e5fbb15bdbe45982c5d51"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:f06d4d748c5ece0787d6bc52becca426ea629f31408185c56615b08079bc65c7"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:309de603ad4198f14331639d22e462e81499870b18a4550308c97ac34af3bf3f"
-        },
-        {
-            "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:814ac0501733d971084ae29559132d582adb02736421bd9a97df740976c97896"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:5cb1f3f8986f4ebd6793bca4d9f404fe674b6cf772bca4486106e93684a8a0eb"
         },
         {
             "name": "scheduler-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:18aa9abe5d4e705ee6b2b92e96fa5577da8fa3f92d4220c0eaff212ae432198d"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:d9c3e3be7dce5d0ee003a343fed5cab69171dba6eb4a8b82c9411cd037ea245b"
         },
         {
             "name": "webhook-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:aa78424131f2795cb5c70e3247e0b376f225d26c1c64a6c9dd546f2f7d2616f0"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:47da50ff3eb0f5e7db9bf2fb5e03e1068159830d4749d312e540829ed75856f1"
         }
     ]
 }
