@@ -1,6 +1,6 @@
 ### FBC generation
 
-Each OCP version we support will have a dir under fbc/, i.e. fbc/v4.18.  The directories will include:
+Each OCP version we support will have a dir under fbc/, i.e. fbc/v4.18, fbc/v4.19, fbc/v4.20.  The directories will include:
 - a container file for the fbc image
 - a catalog template file
 - a catalog/instaslice-operator dir with the actual fbc fragment
