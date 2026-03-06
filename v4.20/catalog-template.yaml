@@ -1,3 +1,4 @@
+# OCP 4.20 File-Based Catalog for Dynamic Accelerator Slicer (DAS) Operator
 Schema: olm.semver
 GenerateMajorChannels: true
 GenerateMinorChannels: false
