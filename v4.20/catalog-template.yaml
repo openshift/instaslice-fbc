@@ -3,4 +3,4 @@ GenerateMajorChannels: true
 GenerateMinorChannels: false
 Stable:
   Bundles:
-  - Image: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:309de603ad4198f14331639d22e462e81499870b18a4550308c97ac34af3bf3f
+  - Image: registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:b789c76ceaa01e7f017c5eeecaeba9b7e76358e316e7f6595e97222a1e2d87f4
