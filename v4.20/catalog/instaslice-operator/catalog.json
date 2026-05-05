@@ -17,7 +17,7 @@
     "schema": "olm.bundle",
     "name": "das-operator.v0.1.0",
     "package": "das-operator",
-    "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:b789c76ceaa01e7f017c5eeecaeba9b7e76358e316e7f6595e97222a1e2d87f4",
+    "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:38c2a4e3a437a64bc88e059b3229890432cc7945377e8b943a6e9cb835a82bdf",
     "properties": [
         {
             "type": "olm.gvk",
@@ -57,8 +57,8 @@
                     "alm-examples": "[\n  {\n    \"apiVersion\": \"inference.redhat.com/v1alpha1\",\n    \"kind\": \"DASOperator\",\n    \"metadata\": {\n      \"name\": \"cluster\",\n      \"namespace\": \"das-operator\"\n    },\n    \"spec\": {\n      \"logLevel\": \"Normal\",\n      \"managementState\": \"Managed\",\n      \"operatorLogLevel\": \"Normal\"\n    }\n  }\n]",
                     "capabilities": "Basic Install",
                     "categories": "Drivers and plugins",
-                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:24cc2fdb28108461f402327eac6e4d826f7e594cf42a77947824a15f39fdd5f0",
-                    "createdAt": "2025-09-19T20:10:57Z",
+                    "containerImage": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:c588c7a1612c944e8b95b3d166c1de46d100fb16ae95641121ddb07fade541a7",
+                    "createdAt": "2026-03-13T23:31:57Z",
                     "description": "Dynamic Accelerator Slicer works with GPU operator to create mig slices on demand",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -72,7 +72,7 @@
                     "features.operators.openshift.io/token-auth-gcp": "false",
                     "operatorframework.io/suggested-namespace": "das-operator",
                     "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
-                    "operators.operatorframework.io/builder": "operator-sdk-v1.41.1",
+                    "operators.operatorframework.io/builder": "operator-sdk-unknown",
                     "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4",
                     "repository": "https://github.com/openshift/instaslice-operator",
                     "support": "https://github.com/openshift/instaslice-operator/issues"
@@ -184,23 +184,23 @@
     "relatedImages": [
         {
             "name": "daemonset-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:0ba6b4f253731294d5d0ddc41ee4e8f385f64d900627bc66b239aab38fbc9c74"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-daemonset-rhel9@sha256:747e20def6983648e509fd76ab40a6aef57c4e49dcb619d4f6a4f1f531121758"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:b789c76ceaa01e7f017c5eeecaeba9b7e76358e316e7f6595e97222a1e2d87f4"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-operator-bundle@sha256:38c2a4e3a437a64bc88e059b3229890432cc7945377e8b943a6e9cb835a82bdf"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:24cc2fdb28108461f402327eac6e4d826f7e594cf42a77947824a15f39fdd5f0"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-rhel9-operator@sha256:c588c7a1612c944e8b95b3d166c1de46d100fb16ae95641121ddb07fade541a7"
         },
         {
             "name": "scheduler-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:7cd069c53765a923c4d7d7e33505cd9d945bbb048c278035eb5c4848675d1758"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-scheduler-rhel9@sha256:bfa2529142093b7dcd38dea004807b6836650984b50320c3ee15ebe575123bb3"
         },
         {
             "name": "webhook-image",
-            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:b7f0235f3af7ec31b821425c42a7c9154a420f731dd5bc9a9209d630bbba11a3"
+            "image": "registry.redhat.io/dynamic-accelerator-slicer-tech-preview/instaslice-webhook-rhel9@sha256:828bc644e73a656625b9cd9bcaadfa35e5a6c84ce02848f2e7cfc93a1828fabc"
         }
     ]
 }
